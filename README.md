@@ -1,49 +1,29 @@
-# Quantum, AI & Machine Learning Research
+# Quantum Computing, AI & Large Language Models
 
 **Author:** Avenash V  
 **Academic profile:** 2nd Year B.Tech — Software Product Engineering (SPE)  
 **Institution:** Kalvium × VELS  
 **Status:** Ongoing learning and research
 
-A structured repository for studying quantum computing, artificial intelligence, machine learning, and the implications of quantum technologies for blockchain security. The goal is to build the fundamentals carefully, document concepts with equations and visuals, and support the theory with reproducible examples.
+A research and learning repository exploring the intersection of **quantum computing, artificial intelligence (AI), machine learning (ML), and large language models (LLMs)**.
+
+The repository builds from quantum-computing fundamentals through quantum machine learning, then connects classical AI/ML and LLM techniques to research questions involving text representation and classification.
+
+> **Research direction:** investigate text classification at the intersection of LLMs and quantum machine learning. A planned experimental path is to create text embeddings using an LLM, apply preprocessing and dimensionality reduction where appropriate, and compare classical classifiers with quantum or hybrid quantum-classical classifiers using reproducible evaluation.
+
+This is an evolving student research repository. It documents concepts, mathematics, papers, diagrams, code examples, datasets, and experiments as they are studied and validated.
+
+---
 
 ## Research areas
 
 | Area | Scope | Status |
 |---|---|---|
-| **Quantum computing** | Classical information, quantum physics, qubits, superposition, measurement, entanglement | Learning notes through entanglement |
-| **Artificial intelligence** | AI fundamentals, neural networks, language models, applications, limitations | To be expanded |
-| **Machine learning** | Data preparation, learning methods, model evaluation, experiments | To be expanded |
-| **Quantum + blockchain** | Cryptographic assumptions, quantum threat models, post-quantum approaches | Research direction |
-
-## Quantum learning roadmap
-
-The `quantum/` folder follows this sequence:
-
-1. Classical computing and binary information
-2. Introduction to quantum physics
-3. Qubits and state representation
-4. Quantum superposition
-5. Quantum measurement and the Born rule
-6. Quantum entanglement
-
-**Current study boundary:** quantum entanglement. Quantum gates, circuits, algorithms, and hardware will be added only as future learning stages.
-
-### A first entangled-state example
-
-One Bell state is:
-
-\[
-|\Phi^+\rangle = \frac{1}{\sqrt{2}}\left(|00\rangle + |11\rangle\right).
-\]
-
-When measured in the computational basis, the ideal outcomes are 00 and 11, each with probability \(1/2\). This is a joint state that cannot be written as a product of two independent single-qubit states.
-
-### Quantum entanglement visual
-
-![Illustration of two entangled particles](https://commons.wikimedia.org/wiki/Special:FilePath/Entangled_particles.svg)
-
-*Image: “Entangled particles.svg”, Sean Kelley / The Quantum Atlas, via Wikimedia Commons. Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). See the [file page](https://commons.wikimedia.org/wiki/File:Entangled_particles.svg) for attribution and licensing details.*
+| **Quantum foundations** | Classical information, quantum physics, qubits, superposition, measurement, entanglement | Learning notes through entanglement |
+| **AI & LLMs** | AI fundamentals, NLP, language models, tokenization, embeddings, model evaluation | To be expanded |
+| **Machine learning** | Classification, feature engineering, dimensionality reduction, evaluation | To be expanded |
+| **Quantum machine learning** | Quantum kernels, QSVM, quantum KNN, QNNs, hybrid quantum-classical models | Literature review and foundations |
+| **Research experiments** | LLM-based text embeddings and classical vs quantum/hybrid classification | Planned |
 
 ## Repository structure
 
@@ -59,28 +39,42 @@ QuantumBlockchain__Research/
 │   ├── 05-quantum-measurement/
 │   └── 06-quantum-entanglement/
 ├── ai/
-│   ├── README.md
 │   ├── fundamentals/
 │   ├── neural-networks/
+│   ├── natural-language-processing/
 │   ├── large-language-models/
+│   ├── embeddings/
 │   └── experiments/
 ├── machine-learning/
-│   ├── README.md
 │   ├── fundamentals/
 │   ├── supervised-learning/
 │   ├── unsupervised-learning/
+│   ├── dimensionality-reduction/
 │   ├── model-evaluation/
 │   └── experiments/
-├── quantum-blockchain/
+├── quantum-machine-learning/
 │   ├── README.md
-│   ├── blockchain-fundamentals/
-│   ├── cryptography/
-│   ├── quantum-threats/
-│   └── post-quantum-cryptography/
+│   ├── fundamentals/
+│   ├── quantum-feature-maps/
+│   ├── quantum-kernels/
+│   ├── quantum-svm/
+│   ├── quantum-knn/
+│   ├── quantum-neural-networks/
+│   └── hybrid-models/
+├── research/
+│   ├── README.md
+│   ├── problem-statement/
+│   ├── literature-review/
+│   ├── text-classification/
+│   ├── methodology/
+│   └── experiments/
 ├── examples/
 │   ├── python/
 │   ├── notebooks/
 │   └── visualizations/
+├── datasets/
+│   ├── README.md
+│   └── processed/
 ├── assets/
 │   ├── images/
 │   ├── diagrams/
@@ -89,21 +83,68 @@ QuantumBlockchain__Research/
 └── notes/
 ```
 
-## Documentation standards
+## Quantum foundations: current learning boundary
 
-- Give each substantial concept its own Markdown page.
-- Explain notation and define symbols before using equations.
-- Include worked examples, diagrams, and visual intuition where useful.
-- Put repository-owned images and diagrams in `assets/`; use relative paths.
-- Attribute external images and check licences before reuse.
-- Keep runnable examples separate from explanatory notes.
-- Record dataset sources, software versions, experiment settings, and metrics.
-- Cite primary papers, standards, books, and official documentation.
-- Distinguish established results, interpretations, hypotheses, and open questions.
+The `quantum/` directory follows this learning sequence:
 
-## Research direction: quantum computing and blockchain
+1. Classical computing and binary information
+2. Introduction to quantum physics
+3. Qubits and state representation
+4. Quantum superposition
+5. Quantum measurement and the Born rule
+6. Quantum entanglement
 
-The longer-term direction is to investigate how sufficiently capable quantum computers could affect cryptographic systems used by blockchain networks, and how post-quantum cryptography may support future migration. This repository does not claim that practical quantum attacks against deployed blockchains are imminent; security claims will be tied to evidence and explicit threat models.
+The current foundational study ends at entanglement. Quantum gates, circuits, algorithms, and hardware will be added in a later stage as they are studied.
+
+## Quantum machine learning
+
+Quantum machine learning (QML) studies how quantum information processing can be integrated with machine-learning methods. This repository will distinguish between:
+
+- **Quantum-enhanced classical ML:** a quantum component is used within an otherwise classical learning workflow, such as a quantum kernel used by an SVM.
+- **Native quantum ML:** the learning model itself is formulated around quantum states and operations, such as quantum neural-network approaches.
+- **Hybrid quantum-classical ML:** classical preprocessing or optimization is combined with parameterized quantum computations.
+
+Topics planned for study include quantum feature maps, quantum kernels, QSVM, quantum KNN, quantum neural networks, and hybrid architectures.
+
+## Research direction: LLM embeddings for text classification
+
+The intended experimental workflow is:
+
+```mermaid
+flowchart TD
+  A[Public text dataset] --> B[Cleaning and preprocessing]
+  B --> C[LLM-based text embeddings]
+  C --> D[Feature analysis / dimensionality reduction]
+  D --> E[Classical baseline classifiers]
+  D --> F[Quantum or hybrid classifiers]
+  E --> G[Reproducible evaluation]
+  F --> G
+  G --> H[Compare results and limitations]
+```
+
+The comparison should use consistent dataset splits and clearly documented preprocessing. Evaluation should include suitable metrics such as accuracy, precision, recall, F1-score, confusion matrices, and computational/resource measurements where feasible. The classical baseline must be treated seriously; a quantum approach should not be assumed to be faster or more accurate without evidence.
+
+## Initial literature reference
+
+Devadas, R. M., & T, S. (2025). *Quantum machine learning: A comprehensive review of integrating AI with quantum computing for computational advancements*. **MethodsX, 14**, 103318.
+
+- DOI: [10.1016/j.mex.2025.103318](https://doi.org/10.1016/j.mex.2025.103318)
+- The review discusses quantum-enhanced classical ML and native QML, including SVM, KNN, and quantum neural networks.
+- It surveys concepts such as quantum feature mapping, distance metrics, circuit design, and hybrid quantum-classical architectures.
+- It identifies challenges including noise, hardware limitations, scalability, training cost, and encoding classical data into quantum systems.
+
+This paper is a starting point for the literature review, not proof that QML universally outperforms classical ML. Its findings and cited studies should be critically checked before being used to justify an experiment.
+
+## Documentation and experiment standards
+
+- Explain concepts before using advanced notation; define all mathematical symbols.
+- Give substantial topics their own Markdown pages.
+- Include diagrams and visual references with attribution and licence details.
+- Cite primary research papers, standards, books, and official documentation.
+- Record dataset source, licence, preprocessing, splits, model settings, random seeds, software versions, and evaluation metrics.
+- Separate simulation results from results obtained on quantum hardware.
+- Report limitations, resource costs, and negative results as well as positive findings.
+- Do not claim quantum advantage unless the experiment supports that claim under a fair comparison.
 
 ## Author
 
@@ -115,4 +156,4 @@ Kalvium × VELS
 
 ---
 
-*An evolving learning and research repository. Content is added progressively as concepts are studied, tested, and reviewed.*
+*An evolving learning and research repository. Content is added progressively as concepts are studied, implemented, and reviewed.*
