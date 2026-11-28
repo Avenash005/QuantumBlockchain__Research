@@ -38,3 +38,12 @@ flowchart TD
 - What is a basis?
 - Why are amplitudes complex?
 - How does the measurement basis affect probabilities?
+
+
+## Visual reference: Bloch sphere
+
+![Bloch sphere representation of a qubit](https://commons.wikimedia.org/wiki/Special:FilePath/Bloch_Sphere.svg)
+
+The Bloch sphere is a geometric representation of a pure qubit state. The north and south poles correspond to the computational basis states \(|0\rangle\) and \(|1\rangle\), while other points on the sphere represent other pure states.
+
+*Diagram: Glosser.ca, via Wikimedia Commons, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). [Source and attribution](https://commons.wikimedia.org/wiki/File:Bloch_Sphere.svg).*
