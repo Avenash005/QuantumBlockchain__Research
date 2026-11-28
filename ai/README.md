@@ -1,28 +1,31 @@
-# Artificial Intelligence
+# Artificial Intelligence & Large Language Models
 
-This section collects structured notes and practical experiments about artificial intelligence: systems designed to perform tasks involving perception, prediction, language, planning, or decision support.
+This section covers AI foundations and the language technologies relevant to the research direction.
 
-## Learning roadmap
-1. AI terminology, history, and problem formulation
-2. Search, logic, and knowledge representation
-3. Neural networks and deep learning
-4. Natural language processing
-5. Large language models and embeddings
-6. Retrieval-augmented generation and tool use
-7. Evaluation, safety, bias, and limitations
+## Planned modules
+- AI fundamentals and problem formulation
+- Neural networks and deep learning
+- Natural language processing (NLP)
+- Tokenization and text preprocessing
+- Transformer architecture and attention
+- Large language models: training, inference, capabilities, and limitations
+- Text embeddings and semantic representations
+- Embedding evaluation and dimensionality reduction
+- Responsible evaluation and reproducibility
 
-## AI system workflow
+## Connection to the research project
+
+The planned text-classification workflow uses an LLM to generate text embeddings from public datasets. Those embeddings may then be preprocessed and passed to classical, quantum, or hybrid classifiers. The LLM embedding stage and classifier stage should be evaluated and documented separately.
+
+## Example workflow
 
 ```mermaid
 flowchart LR
-  A[Problem] --> B[Data and context]
-  B --> C[Model or reasoning method]
-  C --> D[Evaluation]
-  D --> E[Human review and deployment]
+  A[Raw text] --> B[Preprocessing]
+  B --> C[LLM encoder]
+  C --> D[Embedding vectors]
+  D --> E[Classifier]
+  E --> F[Predicted class]
 ```
 
-## AI and machine learning
-
-AI is the broader field. Machine learning is one approach within AI in which a model learns patterns from data rather than relying only on hand-written rules. Not every AI technique is machine learning.
-
-Record model/version, data or prompt context, evaluation method, and known failure modes for each experiment. Verify generated outputs before presenting them as facts.
+Document model name/version, pooling strategy, embedding dimension, token limits, preprocessing, and whether the embedding model is frozen.
