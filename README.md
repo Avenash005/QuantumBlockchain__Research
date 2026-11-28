@@ -28,7 +28,7 @@ This is an evolving student research repository. It documents concepts, mathemat
 ## Repository structure
 
 ```text
-QuantumBlockchain__Research/
+Quantum-AI-LLM-Research/
 ├── README.md
 ├── quantum/
 │   ├── README.md
