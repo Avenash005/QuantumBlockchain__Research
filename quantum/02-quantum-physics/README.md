@@ -35,3 +35,10 @@ In situations with interference, amplitudes are combined first; probabilities ar
 - Measurement and the Born rule
 
 Add sourced experimental images to `assets/images/` and diagrams to `assets/diagrams/`.
+
+
+## Visual reference: double-slit experiment
+
+![Simplified double-slit experiment diagram](https://commons.wikimedia.org/wiki/Special:FilePath/Double_Slit_Experiment_-_Simplified_Diagram.jpg)
+
+*Diagram: Theodore Xu, via Wikimedia Commons, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). [Source and attribution](https://commons.wikimedia.org/wiki/File:Double_Slit_Experiment_-_Simplified_Diagram.jpg).*
